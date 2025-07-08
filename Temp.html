@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form > 
+
+            <center>
+            Enter Temperature in celcius <br>
+            <input type="text"  id ="cel"> <br>
+            <button type="button" onclick="coversion()"> Covert Tem to Far</button><br>
+            <strong> Result:<span id = "res"></span></strong>
+           </center>
+    </form>
+    <script>
+
+        function coversion(){
+             let no1 = document.getElementById("cel").value;
+             const total = (no1*9/5)+32;
+             console.log((total));
+        document.getElementById("res").innerHTML= (total);
+            }
+    </script>
+</body>
+</html>
