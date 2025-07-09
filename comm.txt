@@ -1,0 +1,94 @@
+
+saravanan.ram@CPDK216 MINGW64 ~/Desktop/sd
+$ git init
+Initialized empty Git repository in C:/Users/saravanan.ram/Desktop/sd/.git/
+
+saravanan.ram@CPDK216 MINGW64 ~/Desktop/sd (master)
+$ git branch -m main
+
+saravanan.ram@CPDK216 MINGW64 ~/Desktop/sd (main)
+$ git add .
+warning: in the working copy of 'mydata.js', LF will be replaced by CRLF the next time Git touches it
+
+saravanan.ram@CPDK216 MINGW64 ~/Desktop/sd (main)
+$ ls
+mydata.js
+
+saravanan.ram@CPDK216 MINGW64 ~/Desktop/sd (main)
+$ git commit -m "by sar"
+[main (root-commit) 6d4c62a] by sar
+ 1 file changed, 16 insertions(+)
+ create mode 100644 mydata.js
+
+saravanan.ram@CPDK216 MINGW64 ~/Desktop/sd (main)
+$ git remote add origin https://github.com/saravananRdeveloper/test.git
+
+saravanan.ram@CPDK216 MINGW64 ~/Desktop/sd (main)
+$ git push origin main
+To https://github.com/saravananRdeveloper/test.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/saravananRdeveloper/test.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+saravanan.ram@CPDK216 MINGW64 ~/Desktop/sd (main)
+$ git pull
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 871 bytes | 4.00 KiB/s, done.
+From https://github.com/saravananRdeveloper/test
+ * [new branch]      main       -> origin/main
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> main
+
+
+saravanan.ram@CPDK216 MINGW64 ~/Desktop/sd (main)
+$ git pull origin main
+From https://github.com/saravananRdeveloper/test
+ * branch            main       -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
+saravanan.ram@CPDK216 MINGW64 ~/Desktop/sd (main)
+$ git pull --rebase origin main
+From https://github.com/saravananRdeveloper/test
+ * branch            main       -> FETCH_HEAD
+Successfully rebased and updated refs/heads/main.
+
+saravanan.ram@CPDK216 MINGW64 ~/Desktop/sd (main)
+$ git push
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+saravanan.ram@CPDK216 MINGW64 ~/Desktop/sd (main)
+$ git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 549 bytes | 183.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/saravananRdeveloper/test.git
+   e316430..ad742e3  main -> main
+
+saravanan.ram@CPDK216 MINGW64 ~/Desktop/sd (main)
+$ ^C
+
+saravanan.ram@CPDK216 MINGW64 ~/Desktop/sd (main)
+$
